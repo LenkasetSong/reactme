@@ -1,0 +1,97 @@
+.inputer {
+}
+
+.inputerfocus span:after {
+  content: '';
+  position: absolute;
+  // right: -3px;
+  left: 0;
+  top: 0px;
+  height: 90%;
+  width: 2px;
+  background: #000;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    width: 2px;
+  }
+
+  49.9999% {
+    width: 2px;
+  }
+
+  50.0001% {
+    width: 0;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+.KeyBoard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: gray;
+  padding: 2px;
+  height: 70px;
+  margin-top: '15px';
+  line-height: 70px;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  width: 100%;
+}
+
+.leftKeys {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.rightKeys {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 250px;
+  width: 200px;
+  height: 100%;
+}
+
+.keysNormal {
+  // flex: 1;
+  // overflow: hidden;
+  // margin-left: 2px;
+  background-color: white;
+}
+
+.keysDown {
+  // flex: 1;
+  // overflow: hidden;
+  // margin-left: 2px;
+  background-color: white;
+  // border: solid 2px lime;
+  color: limegreen;
+  font-weight: 800;
+}
+
+.keysHover {
+  // flex: 1;
+  // overflow: hidden;
+  // margin-left: 2px;
+  background-color: white;
+  color: orange;
+}
+
+.keysDisabled {
+  // flex: 1;
+  // overflow: hidden;
+  // margin-left: 2px;
+  background-color: gray;
+  // color: gray;
+}

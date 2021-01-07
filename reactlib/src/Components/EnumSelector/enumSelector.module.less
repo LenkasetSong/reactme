@@ -1,0 +1,45 @@
+:root {
+  --color1: #606060;
+}
+
+.root {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+}
+
+.pager {
+  font-size: 36px;
+  align-self: center;
+  :hover {
+    color: red;
+  }
+  :active {
+    color: blue;
+  }
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.caption {
+  background-color: #f0f0f0;
+  margin: 3px;
+  padding: 0 6px 0 0;
+  // border-right: solid medium #e0e0e0;
+  width: 40%;
+  text-align: right;
+}
+
+// .commons-pagination-item {
+//   min-width: 45px;
+//   min-height: 42px;
+//   line-height: 42px;
+// }

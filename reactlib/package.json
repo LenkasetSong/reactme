@@ -1,0 +1,116 @@
+{
+  "name": "commons",
+  "version": "0.1.0",
+  "private": false,
+  "homepage": "/commons",
+  "antdPrefix": "commons",
+  "proxy": "http://localhost:9001/api",
+  "dependencies": {
+    "@ant-design/icons": "^4.2.2",
+    "@arction/lcjs": "^2.1.0",
+    "@babel/plugin-proposal-decorators": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@craco/craco": "^5.6.4",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^10.4.9",
+    "@testing-library/user-event": "^12.1.3",
+    "ahooks": "^2.5.0",
+    "antd": "^4.6.1",
+    "axios": "^0.20.0",
+    "classnames": "^2.2.6",
+    "craco-alias": "^2.1.1",
+    "craco-antd": "^1.18.1",
+    "craco-less": "^1.17.0",
+    "dclc": "^0.1.192",
+    "js-cookie": "^2.2.1",
+    "json-rpc2": "^2.0.0",
+    "nprogress": "^0.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-infinite-scroller": "^1.2.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "style-inject": "^0.3.0"
+  },
+  "scripts": {
+    "start": "set PORT=3999 && craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "lint": "eslint src --fix",
+    "mock": "node ./mock/app.js",
+    "dev": "run-p start mock"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.8",
+    "@babel/node": "^7.12.6",
+    "@babel/plugin-external-helpers": "^7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+    "@babel/plugin-syntax-object-rest-spread": "^7.8.3",
+    "@babel/plugin-transform-react-jsx": "^7.12.7",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
+    "@babel/runtime": "^7.12.5",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@loadable/component": "^5.13.1",
+    "@rollup/plugin-image": "^2.0.5",
+    "@svgr/webpack": "^5.4.0",
+    "connect-api-mocker": "^1.9.0",
+    "cors": "^2.8.5",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "express": "^4.17.1",
+    "husky": "^5.0.0",
+    "less": "^3.12.2",
+    "lint-staged": "^10.5.1",
+    "mockjs": "^1.1.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-postcss": "^3.1.8",
+    "stylelint": "^13.6.1",
+    "stylelint-config-recess-order": "^2.0.4",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged",
+      "pre-add": "lint-staged",
+      "pre-push": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{jsx,txs,ts,js,json,css,md}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
